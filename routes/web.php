@@ -2,8 +2,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\TaxController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\CustomerController;
@@ -33,8 +33,8 @@ Route::get('/edit_profile', [HomeController::class, 'edit_profile'])->name('edit
 Route::post('/update_profile/{id}', [HomeController::class, 'update_profile'])->name('update_profile');
 Route::get('/password_change/', [HomeController::class, 'update_password'])->name('update_password');
 
-Route::resource('category', CategoryController::class);
 Route::resource('tax', TaxController::class);
+Route::resource('category', CategoryController::class);
 Route::resource('unit', UnitController::class);
 Route::resource('supplier', SupplierController::class);
 Route::resource('customer', CustomerController::class);
